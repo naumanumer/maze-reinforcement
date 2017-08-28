@@ -36,7 +36,7 @@ function initGame() {
 
     $("#board .cell").click(function () {
         var pos = getPosFromCellAddr($(this).attr('id'));
-        var index = pos[0] + pos[1]* size;
+        var index = pos[0] + pos[1] * size;
         console.log(pos, env.rewardArry[index]);
     })
 }
@@ -47,7 +47,8 @@ function drawWeights() {
 
             var r = 255,
                 g = 255,
-                b = 255;
+                b = 255,
+                a = 1;
             var cell = env.xyToS(x, y);
 
             // get value of cell under agent policy
@@ -71,13 +72,15 @@ function drawWeights() {
                 g = 255;
                 r = 255 - vv * ms;
                 b = 255 - vv * ms;
+                a = 0.2;
             }
             if (vv < 0) {
                 g = 255 + vv * ms;
                 r = 255;
                 b = 255 + vv * ms;
+                a = 1;
             }
-            var vcol = 'rgb(' + Math.floor(r) + ',' + Math.floor(g) + ',' + Math.floor(b) + ')';
+            var vcol = `rgba(${Math.floor(r)},${Math.floor(g)},${Math.floor(b)}, ${a})`;
             if (env.t && env.T[cell] === 1) vcol = "#AAA";
 
             var id = `#${x}-${y}`;

@@ -10,7 +10,7 @@ GameWorld.prototype = {
 
         var rewardArry = R.zeros(this.gameStates);
 
-        rewardArry[rewardArry.length - 1] = 3; // ending title
+        rewardArry[rewardArry.length - 1] = size; // ending title
         rewardArry[0] = -0.1; // start tile
 
         rewardArry[size-1] = -0.1; // top right tile

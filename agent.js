@@ -25,7 +25,7 @@ function start() {
     spec.update = 'qlearn'; // 'qlearn' or 'sarsa'
     spec.gamma = 0.9; // discount factor, [0, 1)
     spec.epsilon = 0.2; // initial epsilon for epsilon-greedy policy, [0, 1)
-    spec.alpha = 0.1; // value function learning rate
+    spec.alpha = 0.3; // value function learning rate
     spec.lambda = 0; // eligibility trace decay, [0,1). 0 = no eligibility traces
     spec.replacing_traces = true; // use replacing or accumulating traces
     spec.planN = 50; // number of planning steps per iteration. 0 = no planning
