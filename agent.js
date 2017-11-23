@@ -73,7 +73,7 @@ var tdlearn = function () {
                     } catch (error) {}
 
                     gen++;
-                    writeOnConsole(`Generation ${gen} ends in ${nsteps_counter} actions`);
+                    writeOnConsole(`Iteration ${gen} ends in ${nsteps_counter} actions`);
 
                     nsteps_history.push(nsteps_counter);
                     nsteps_counter = 0;
